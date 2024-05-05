@@ -929,7 +929,7 @@ h4 {
   justify-content: space-between;
   flex-wrap: wrap;
 }
-
+.form-div,
 .client-name,
 .client-mail {
   max-width: 280px;
@@ -1000,9 +1000,10 @@ textarea {
     padding-bottom: 50px;
   }
 
+  .form-div,
   .client-name,
   .client-mail {
-    max-width: 300px;
+    max-width: 320px;
   }
 
   .client-name {
@@ -1038,6 +1039,17 @@ textarea {
     line-height: 18px;
   }
 }
+
+.error {
+  border: 1px solid red;
+}
+.error-span,
+.error-checkbox {
+  color: red;
+  display: block;
+}
+
+
 
 
 

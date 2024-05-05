@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <title>Test  Task</title>
+  <title>Test Task</title>
 </head>
 <body>
 <header>
@@ -543,24 +543,31 @@
       </div>
       <span class="small-title">Или оставьте ваши данные и я сама вам напишу:</span>
 
-      <form class="footer-form">
+      <form class="footer-form" action="" id="message-form">
         <div class="client-information">
-          <fieldset class="client-name">
-            <legend class="legend">Ваше имя</legend>
-            <input type="text" placeholder="Иван" class="input">
-          </fieldset>
-          <fieldset class="client-mail">
-            <legend class="legend">Ваша почта</legend>
-            <input type="email">
+          <div class="form-div">
+            <fieldset class="client-name">
+              <legend class="legend">Ваше имя</legend>
+              <input type="text" placeholder="Иван" class="input mess">
+            </fieldset>
+          </div>
+          <div class="form-div">
+            <fieldset class="client-mail">
+              <legend class="legend">Ваша почта</legend>
+              <input type="email" class="mess">
+            </fieldset>
+          </div>
+        </div>
+        <div class="textarea-div">
+          <fieldset class="message">
+            <legend class="legend">Ваше сообщение</legend>
+            <textarea class="mess"></textarea>
           </fieldset>
         </div>
-        <fieldset class="message">
-          <legend class="legend">Ваше сообщение</legend>
-          <textarea></textarea>
-        </fieldset>
+
 
         <div class="privacy-policy">
-          <input type="checkbox" class="policy-checkbox">
+          <input type="checkbox" class="policy-checkbox" id="checkbox">
           <span class="policy-text">Я согласен(а) с <a href="https://www.google.com" target="_blank">политикой конфиденциальности</a></span>
         </div>
 
