@@ -49,7 +49,6 @@ anchors.forEach(anchor => {
 
 /*-----------validation----------------------*/
 
-
 function validation(form) {
     let result = true
 
@@ -84,7 +83,7 @@ function sendMeMessage(event) {
 
     if (validation(this) === true) {
         alert('Сообщение отправлено')
-        clearInput()
+        //clearInput()
     }
 }
 
@@ -126,6 +125,27 @@ function removeCheckboxError(input) {
         parent.querySelector('.error-span').remove()
         parent.classList.remove('error-checkbox')
     }
+}
+
+
+
+/*------------------отправка данных из формы------------------------*/
+
+const form = document.getElementById('message-form')
+form.addEventListener('submit', sendMessage)
+
+async function sendMessage(event) {
+    event.preventDefault()
+
+    const formData = new FormData(form)
+for (let data of formData) {
+    console.log(data)
+}
+    await fetch('http://localhost:63342/TestTask', {
+        method: 'POST',
+        body: formData
+    })
+    clearInput()
 }
 
 function clearInput() {
